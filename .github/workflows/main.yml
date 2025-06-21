@@ -25,3 +25,19 @@ jobs:
       - name: Show all files
 
         run: ls -al
+      - name: Execute remote SSH commands using password 
+        uses: appleboy/ssh-action@v1 
+        with: 
+            host: ${{ secrets.HOST }} 
+            username: linuxserver.io 
+            password: ${{ secrets.PASSWORD }} 
+            port: 22
+            script: whoami
+      - name: Copy file using scp
+        uses: appleboy/ssh-action@v1 
+        with: 
+            host: ${{ secrets.HOST }} 
+            username: linuxserver.io 
+            password: ${{ secrets.PASSWORD }} 
+            port: 22
+            script: whoami
