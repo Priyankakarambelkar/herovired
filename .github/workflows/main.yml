@@ -1,0 +1,20 @@
+name: b11 deploy html to ec2
+
+on:
+  push:
+      branches: 
+        - main
+
+jobs:
+  deploy: 
+      runs-on: ubantu-latest
+
+      steps:
+
+        - name: checkout code
+          uses: actions/checkout@4
+
+        - name: List all the files
+          run: ls -al 
+
+  
