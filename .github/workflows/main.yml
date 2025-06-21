@@ -7,9 +7,8 @@ on:
 
 jobs:
   deploy: 
-      runs-on: ubantu-latest
-
-      steps:
+    runs-on: ubantu-latest
+    steps:
         - name: checkout code
           uses: actions/checkout@v4
         - name: List all the files
