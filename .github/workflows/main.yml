@@ -1,15 +1,27 @@
-name: b11 deploy html to ec2
-
 on:
+
   push:
-    branches: 
-        - main
+
+    branches:
+
+      - main
+
+      - dev
+
+      - d
 
 jobs:
-  deploy: 
-    runs-on: ubantu-latest
+
+  deploy:
+
+    runs-on: ubuntu-latest
+
     steps:
-        - name: checkout code
-          uses: actions/checkout@v4
-        - name: List all the files
-          run: ls -al
+
+      - name: Checkout Code
+
+        uses: actions/checkout@v4
+
+      - name: Show all files
+
+        run: ls -al
